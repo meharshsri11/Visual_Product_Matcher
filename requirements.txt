@@ -1,7 +1,7 @@
 Flask
-requests
-python-dotenv
+numpy
 Pillow
 imagehash
-thefuzz
+fuzzywuzzy
 python-Levenshtein
+gunicorn
