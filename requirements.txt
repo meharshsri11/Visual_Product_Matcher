@@ -1,0 +1,7 @@
+Flask
+requests
+python-dotenv
+Pillow
+imagehash
+thefuzz
+python-Levenshtein
