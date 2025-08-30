@@ -1,0 +1,11 @@
+__pycache__/
+
+# Virtual environment
+.venv/
+
+# Uploaded images or large files
+static/uploads/
+
+# IDE / editor files
+.vscode/
+*.log
