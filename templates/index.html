@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Visual Product Matcher</title>
+    <style>
+        :root {
+            --brand-green: #2ecc71;
+            --brand-dark: #0b3d2e;
+            --bg: #f7f9f8;
+            --muted: #0b3d2e;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: Inter, system-ui, "Segoe UI", Roboto, Arial;
+        }
+
+        body {
+            background: var(--bg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 28px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin: 6px 0 18px;
+        }
+
+        .header-section h1 {
+            margin: 0;
+            font-size: 44px;
+            font-weight: 700;
+            color: var(--brand-dark);
+        }
+
+        .header-section h1 span {
+            color: var(--brand-green);
+        }
+
+        .header-section p {
+            margin: 12px 0;
+            font-size: 20px;
+            color: #0b3d2e;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .header-section hr {
+            width: 60px;
+            height: 3px;
+            background-color: var(--brand-green);
+            border: none;
+            margin: 12px auto 0;
+        }
+
+        .main {
+            width: 100%;
+            max-width: 1200px;
+            background: #fff;
+            border-radius: 14px;
+            padding: 30px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            box-sizing: border-box;
+        }
+
+        .upload {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .input-box {
+            width: 100%;
+            max-width: 720px;
+            padding: 18px;
+            border-radius: 10px;
+            border: 2px dashed #d6d6d6;
+            background: #fbfcfb;
+            text-align: center;
+        }
+
+        .input-box p {
+            margin: 0 0 8px 0;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        input[type="file"], input[type="text"] {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 1px solid #e6e6e6;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .controls {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            justify-content: center;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: var(--brand-green);
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn:disabled {
+            background: #a5d6a7;
+            cursor: not-allowed;
+        }
+
+        .slider-wrap {
+            min-width: 180px;
+            text-align: center;
+        }
+
+        #similarity-threshold {
+            width: 180px;
+        }
+
+        .query-wrap {
+            display: flex;
+            justify-content: center;
+            margin: 18px 0;
+            display: none;
+        }
+
+        .query-card {
+            width: 90%;
+            max-width: 560px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            text-align: left;
+        }
+
+        .query-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: contain;
+            background: #fafafa;
+            display: block;
+        }
+
+        .query-meta {
+            padding: 12px 14px;
+        }
+
+        .query-meta h3 {
+            margin: 0 0 6px 0;
+            font-size: 18px;
+            color: #0b3d2e;
+        }
+
+        .query-meta p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        #results-container {
+            margin-top: 6px;
+        }
+
+        #results-container h2 {
+            margin: 0;
+            color: #0b3d2e;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        #results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 18px;
+        }
+
+        .product-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+        }
+
+        .product-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-item img {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            background: #fbfbfb;
+            display: block;
+        }
+
+        .product-details {
+            padding: 12px;
+        }
+
+        .product-details h4 {
+            margin: 0 0 6px 0;
+            font-size: 15px;
+            color: #111;
+        }
+
+        .product-details p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .similarity {
+            margin-top: 8px;
+            font-weight: 700;
+            color: var(--brand-dark);
+            font-size: 13px;
+        }
+
+        .no-results {
+            padding: 20px;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        .loading-spinner {
+            display: none;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--brand-green);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @media(max-width: 640px) {
+            .header-section h1 { font-size: 32px; }
+            .query-card img { height: 280px; }
+            .product-item img { height: 200px; }
+            .input-box { padding: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>Visual Product <span>Matcher</span></h1>
+        <p>Find Similar Products with AI-Powered Visual Search</p>
+        <hr>
+    </div>
+
+    <div class="main">
+        <div class="upload">
+            <div class="input-box">
+                <p>Upload an image or paste an image URL</p>
+                <input type="file" name="image_file" id="image_file" accept="image/*">
+                <div style="height: 8px"></div>
+                <input type="text" name="image_url" id="image_url" placeholder="Paste image URL here...">
+                <div style="height: 8px"></div>
+                <input type="text" name="text_query" id="text_query" placeholder="Enter a text query (e.g., Slim-fit jeans)...">
+                <div class="controls">
+                    <div class="slider-wrap">
+                        <label for="similarity-threshold" style="display: block; margin-bottom: 6px; color: #666; font-size: 13px">
+                            Min Similarity (%)
+                        </label>
+                        <input type="range" id="similarity-threshold" name="similarity-threshold" min="0" max="100" value="0">
+                        <div style="font-size: 13px; color: var(--muted); margin-top: 6px" id="similarity-value">0%</div>
+                    </div>
+                    <div style="min-width: 120px; text-align: center">
+                        <label style="display: block; margin-bottom: 6px; color: #666; font-size: 13px">
+                            Show top
+                        </label>
+                        <select id="results-limit" name="limit" style="padding: 8px; border-radius: 6px; border: 1px solid #ddd">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <button class="btn" id="search-btn">Find Similar Products</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-spinner" id="loading-spinner"></div>
+
+        <div class="query-wrap" id="query-wrap">
+            <div class="query-card" id="query-card">
+                <img id="query-img" src="" alt="Query Image">
+                <div class="query-meta">
+                    <h3 id="query-name">Query Image</h3>
+                    <p id="query-cat">Category: Query Image</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="results-container">
+            <h2>Similar Products</h2>
+            <div id="results-grid"></div>
+        </div>
+    </div>
+
+    <script>
+        const slider = document.getElementById('similarity-threshold');
+        const sliderValue = document.getElementById('similarity-value');
+        slider.addEventListener('input', () => sliderValue.textContent = slider.value + '%');
+
+        const fileInput = document.getElementById('image_file');
+        const urlInput = document.getElementById('image_url');
+        const textInput = document.getElementById('text_query');
+        const searchBtn = document.getElementById('search-btn');
+        const resultsGrid = document.getElementById('results-grid');
+        const queryWrap = document.getElementById('query-wrap');
+        const queryImg = document.getElementById('query-img');
+        const queryName = document.getElementById('query-name');
+        const queryCat = document.getElementById('query-cat');
+        const resultsLimitSelect = document.getElementById('results-limit');
+        const spinner = document.getElementById('loading-spinner');
+
+        async function doSearch() {
+            const formData = new FormData();
+            const file = fileInput.files[0];
+            const url = urlInput.value.trim();
+            const text = textInput.value.trim();
+            const threshold = slider.value;
+            const limit = resultsLimitSelect.value;
+
+            if (!file && !url && !text) {
+                alert('Please upload an image, paste an image URL, or enter a text query.');
+                return;
+            }
+            if (file && url) {
+                alert('Provide either file OR URL, not both.');
+                return;
+            }
+
+            if (file) formData.append('image_file', file);
+            else if (url) formData.append('image_url', url);
+            formData.append('text_query', text);
+            formData.append('similarity-threshold', threshold);
+            formData.append('limit', limit);
+
+            searchBtn.disabled = true;
+            spinner.style.display = 'block';
+
+            resultsGrid.innerHTML = '<div class="no-results">Searching for similar products…</div>';
+            queryWrap.style.display = 'none';
+
+            try {
+                const res = await fetch('/search', { method: 'POST', body: formData });
+                const data = await res.json();
+                spinner.style.display = 'none';
+                searchBtn.disabled = false;
+
+                if (data.error) {
+                    resultsGrid.innerHTML = `<div class="no-results">${data.error}</div>`;
+                    return;
+                }
+
+                const query = data.query_image || null;
+                const similar = data.similar_products || data;
+
+                if (query && query.image_path) {
+                    queryImg.src = query.image_path;
+                    queryName.textContent = query.name || 'Query Image';
+                    queryCat.textContent = 'Category: ' + (query.category || 'N/A');
+                    queryWrap.style.display = 'flex';
+                }
+
+                resultsGrid.innerHTML = '';
+                if (!similar || similar.length === 0) {
+                    resultsGrid.innerHTML = '<div class="no-results">No similar products found.</div>';
+                    return;
+                }
+
+                similar.forEach((prod, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'product-item';
+                    const imgSrc = prod.image_path || '';
+                    const score = (typeof prod.score !== 'undefined') ? prod.score : 'N/A';
+                    card.innerHTML = `
+                        <img src="${imgSrc}" alt="${escapeHtml(prod.name || 'Product')}">
+                        <div class="product-details">
+                            <h4>${escapeHtml(prod.name || 'Unnamed')}</h4>
+                            <p>Category: ${escapeHtml(prod.category || 'N/A')}</p>
+                            <div class="similarity">Similarity: ${Number(score).toFixed(1)}%</div>
+                        </div>`;
+                    resultsGrid.appendChild(card);
+                    setTimeout(() => card.classList.add('show'), index * 50);
+                });
+
+            } catch (err) {
+                console.error(err);
+                spinner.style.display = 'none';
+                searchBtn.disabled = false;
+                resultsGrid.innerHTML = '<div class="no-results">An error occurred while searching.</div>';
+            }
+        }
+
+        searchBtn.addEventListener('click', doSearch);
+        urlInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                doSearch();
+            }
+        });
+        textInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                doSearch();
+            }
+        });
+
+        function escapeHtml(str) {
+            return String(str).replace(/[&<>"']/g, s => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[s]));
+        }
+    </script>
+</body>
+</html>

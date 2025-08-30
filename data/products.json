@@ -1,0 +1,752 @@
+[
+  {
+    "id": "prod_001",
+    "name": "White T-Shirt",
+    "category": "Apparel",
+    "image_path": "images/products1.jpg",
+    "description": "A simple and versatile classic white crewneck t-shirt.",
+    "color": "White",
+    "material": "Cotton",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_002",
+    "name": "Black T-Shirt",
+    "category": "Apparel",
+    "image_path": "images/products2.jpg",
+    "description": "A comfortable and timeless black crewneck t-shirt.",
+    "color": "Black",
+    "material": "Cotton",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_003",
+    "name": "Grey White Shirt",
+    "category": "Apparel",
+    "image_path": "images/products3.jpg",
+    "description": "A stylish shirt with a grey and white color pattern.",
+    "color": "Grey/White",
+    "material": "Cotton Blend",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_004",
+    "name": "Brown Shirt",
+    "category": "Apparel",
+    "image_path": "images/products4.jpg",
+    "description": "A solid brown long-sleeve shirt for a classic look.",
+    "color": "Brown",
+    "material": "Cotton",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_005",
+    "name": "White Brown Top",
+    "category": "Apparel",
+    "image_path": "images/products5.jpg",
+    "description": "A fashionable top featuring a white and brown color combination.",
+    "color": "White/Brown",
+    "material": "Polyester",
+    "style": "Blouse"
+  },
+  {
+    "id": "prod_006",
+    "name": "Cargo Pant",
+    "category": "Apparel",
+    "image_path": "images/products6.jpg",
+    "description": "Durable cargo pants with multiple side pockets.",
+    "color": "Khaki",
+    "material": "Canvas",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_007",
+    "name": "Blue Jeans",
+    "category": "Apparel",
+    "image_path": "images/products7.jpg",
+    "description": "Classic blue denim jeans with a straight-leg fit.",
+    "color": "Blue",
+    "material": "Denim",
+    "style": "Jeans"
+  },
+  {
+    "id": "prod_008",
+    "name": "Green Hoodie",
+    "category": "Apparel",
+    "image_path": "images/products8.jpg",
+    "description": "A comfortable, fleece-lined hoodie in a vibrant green color.",
+    "color": "Green",
+    "material": "Fleece",
+    "style": "Hoodie"
+  },
+  {
+    "id": "prod_009",
+    "name": "Jordan Sneakers",
+    "category": "Footwear",
+    "image_path": "images/products9.jpg",
+    "description": "Iconic Jordan sneakers with a basketball-inspired design.",
+    "color": "Red/Black/White",
+    "material": "Leather/Rubber",
+    "style": "Sneakers"
+  },
+  {
+    "id": "prod_010",
+    "name": "White Sneakers",
+    "category": "Footwear",
+    "image_path": "images/products10.jpg",
+    "description": "Clean, classic white sneakers for everyday casual wear.",
+    "color": "White",
+    "material": "Canvas",
+    "style": "Sneakers"
+  },
+  {
+    "id": "prod_011",
+    "name": "Brown Boots",
+    "category": "Footwear",
+    "image_path": "images/products11.jpg",
+    "description": "Sturdy brown leather boots, perfect for work or casual outings.",
+    "color": "Brown",
+    "material": "Leather",
+    "style": "Boots"
+  },
+  {
+    "id": "prod_012",
+    "name": "Table Brown",
+    "category": "Furniture",
+    "image_path": "images/products12.jpg",
+    "description": "A simple, solid brown wooden table for dining or a study.",
+    "color": "Brown",
+    "material": "Wood",
+    "style": "Furniture"
+  },
+  {
+    "id": "prod_013",
+    "name": "Sofa Set Brown Cream",
+    "category": "Furniture",
+    "image_path": "images/products13.jpg",
+    "description": "A comfortable sofa set with brown and cream upholstery.",
+    "color": "Brown/Cream",
+    "material": "Fabric",
+    "style": "Furniture"
+  },
+  {
+    "id": "prod_014",
+    "name": "Black Jacket",
+    "category": "Apparel",
+    "image_path": "images/products14.jpg",
+    "description": "A versatile black jacket with a front zipper closure.",
+    "color": "Black",
+    "material": "Nylon",
+    "style": "Outerwear"
+  },
+  {
+    "id": "prod_015",
+    "name": "Green Bomber Jacket",
+    "category": "Apparel",
+    "image_path": "images/products15.jpg",
+    "description": "A classic bomber jacket in a military green color.",
+    "color": "Green",
+    "material": "Polyester",
+    "style": "Outerwear"
+  },
+  {
+    "id": "prod_016",
+    "name": "Polo T-Shirt",
+    "category": "Apparel",
+    "image_path": "images/products16.jpg",
+    "description": "A simple short-sleeve polo t-shirt with a collar.",
+    "color": "Navy",
+    "material": "Pique",
+    "style": "Polo"
+  },
+  {
+    "id": "prod_017",
+    "name": "Green Sweater",
+    "category": "Apparel",
+    "image_path": "images/products17.jpg",
+    "description": "A cozy, long-sleeve sweater with a crewneck.",
+    "color": "Green",
+    "material": "Knit",
+    "style": "Knitwear"
+  },
+  {
+    "id": "prod_018",
+    "name": "Half Cream Black Shirt",
+    "category": "Apparel",
+    "image_path": "images/products18.jpg",
+    "description": "A unique shirt with a two-tone design, half cream and half black.",
+    "color": "Cream/Black",
+    "material": "Cotton",
+    "style": "Button-up"
+  },
+  {
+    "id": "prod_019",
+    "name": "Chocolate Color T-Shirt",
+    "category": "Apparel",
+    "image_path": "images/products19.jpg",
+    "description": "A soft, casual t-shirt in a deep chocolate brown color.",
+    "color": "Brown",
+    "material": "Cotton",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_020",
+    "name": "Red Bag",
+    "category": "Accessories",
+    "image_path": "images/products20.jpg",
+    "description": "A compact red handbag with a zipper closure.",
+    "color": "Red",
+    "material": "Synthetic",
+    "style": "Handbag"
+  },
+  {
+    "id": "prod_021",
+    "name": "Cream Backpack",
+    "category": "Accessories",
+    "image_path": "images/products21.jpg",
+    "description": "A spacious cream-colored backpack for school or travel.",
+    "color": "Cream",
+    "material": "Canvas",
+    "style": "Backpack"
+  },
+  {
+    "id": "prod_022",
+    "name": "Black Watch",
+    "category": "Accessories",
+    "image_path": "images/products22.jpg",
+    "description": "A classic analog watch with a black leather strap.",
+    "color": "Black",
+    "material": "Leather/Metal",
+    "style": "Watch"
+  },
+  {
+    "id": "prod_023",
+    "name": "Silver Bracelet",
+    "category": "Accessories",
+    "image_path": "images/products23.jpg",
+    "description": "A simple and elegant sterling silver chain bracelet.",
+    "color": "Silver",
+    "material": "Sterling Silver",
+    "style": "Jewelry"
+  },
+  {
+    "id": "prod_024",
+    "name": "Gold Necklace",
+    "category": "Accessories",
+    "image_path": "images/products24.jpg",
+    "description": "A delicate gold-plated necklace with a small pendant.",
+    "color": "Gold",
+    "material": "Gold Plated",
+    "style": "Jewelry"
+  },
+  {
+    "id": "prod_025",
+    "name": "Wireless Earbuds",
+    "category": "Electronics",
+    "image_path": "images/products25.jpg",
+    "description": "Compact wireless earbuds with a charging case and clear sound.",
+    "color": "White",
+    "material": "Plastic",
+    "style": "Audio"
+  },
+  {
+    "id": "prod_026",
+    "name": "Smart TV",
+    "category": "Electronics",
+    "image_path": "images/products26.jpg",
+    "description": "A 55-inch smart TV with 4K resolution and streaming capabilities.",
+    "color": "Black",
+    "material": "Plastic/Glass",
+    "style": "TV"
+  },
+  {
+    "id": "prod_027",
+    "name": "Laptop",
+    "category": "Electronics",
+    "image_path": "images/products27.jpg",
+    "description": "A sleek, lightweight laptop with a fast processor and long battery life.",
+    "color": "Silver",
+    "material": "Aluminum",
+    "style": "Computer"
+  },
+  {
+    "id": "prod_028",
+    "name": "Gaming Console",
+    "category": "Electronics",
+    "image_path": "images/products28.jpg",
+    "description": "A modern gaming console with high-performance graphics and a large library of games.",
+    "color": "White",
+    "material": "Plastic",
+    "style": "Gaming"
+  },
+  {
+    "id": "prod_029",
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "image_path": "images/products29.jpg",
+    "description": "A portable Bluetooth speaker with powerful sound and a waterproof design.",
+    "color": "Black",
+    "material": "Rubber",
+    "style": "Audio"
+  },
+  {
+    "id": "prod_030",
+    "name": "Wooden Chair",
+    "category": "Furniture",
+    "image_path": "images/products30.jpg",
+    "description": "A sturdy wooden dining chair with a classic, timeless design.",
+    "color": "Brown",
+    "material": "Wood",
+    "style": "Chair"
+  },
+  {
+    "id": "prod_031",
+    "name": "Bookshelf White",
+    "category": "Furniture",
+    "image_path": "images/products31.jpg",
+    "description": "A minimalist white bookshelf with five open shelves for storage.",
+    "color": "White",
+    "material": "MDF",
+    "style": "Storage"
+  },
+  {
+    "id": "prod_032",
+    "name": "Office Desk",
+    "category": "Furniture",
+    "image_path": "images/products32.jpg",
+    "description": "A functional office desk with a large surface and two drawers.",
+    "color": "Black",
+    "material": "Wood/Metal",
+    "style": "Desk"
+  },
+  {
+    "id": "prod_033",
+    "name": "Bed Frame",
+    "category": "Furniture",
+    "image_path": "images/products33.jpg",
+    "description": "A durable metal bed frame that supports a queen-sized mattress.",
+    "color": "Grey",
+    "material": "Metal",
+    "style": "Bed"
+  },
+  {
+    "id": "prod_034",
+    "name": "Coffee Table Glass",
+    "category": "Furniture",
+    "image_path": "images/products34.jpg",
+    "description": "A modern coffee table with a clear glass top and elegant metal legs.",
+    "color": "Clear/Gold",
+    "material": "Glass/Metal",
+    "style": "Table"
+  },
+  {
+    "id": "prod_035",
+    "name": "Floor Lamp",
+    "category": "Home Decor",
+    "image_path": "images/products35.jpg",
+    "description": "A stylish floor lamp with an adjustable head and a slim design.",
+    "color": "Black",
+    "material": "Metal",
+    "style": "Lighting"
+  },
+  {
+    "id": "prod_036",
+    "name": "Framed Wall Art",
+    "category": "Home Decor",
+    "image_path": "images/products36.jpg",
+    "description": "A framed abstract painting with vibrant colors to liven up a room.",
+    "color": "Multicolor",
+    "material": "Canvas/Wood",
+    "style": "Art"
+  },
+  {
+    "id": "prod_037",
+    "name": "Ceramic Vase",
+    "category": "Home Decor",
+    "image_path": "images/products37.jpg",
+    "description": "A handcrafted ceramic vase with a unique, textured surface.",
+    "color": "Blue",
+    "material": "Ceramic",
+    "style": "Vase"
+  },
+  {
+    "id": "prod_038",
+    "name": "Throw Pillow",
+    "category": "Home Decor",
+    "image_path": "images/products38.jpg",
+    "description": "A soft, decorative throw pillow with a geometric pattern.",
+    "color": "Yellow/Grey",
+    "material": "Cotton",
+    "style": "Pillow"
+  },
+  {
+    "id": "prod_039",
+    "name": "Scented Candle",
+    "category": "Home Decor",
+    "image_path": "images/products39.jpg",
+    "description": "A soy wax scented candle with a pleasant lavender aroma.",
+    "color": "White",
+    "material": "Wax/Glass",
+    "style": "Candle"
+  },
+  {
+    "id": "prod_040",
+    "name": "Kitchen Blender",
+    "category": "Kitchen",
+    "image_path": "images/products40.jpg",
+    "description": "A powerful blender with multiple speed settings for smoothies and sauces.",
+    "color": "Silver/Black",
+    "material": "Plastic/Stainless Steel",
+    "style": "Appliance"
+  },
+  {
+    "id": "prod_041",
+    "name": "Coffee Maker",
+    "category": "Kitchen",
+    "image_path": "images/products41.jpg",
+    "description": "A drip coffee maker with a programmable timer for fresh coffee every morning.",
+    "color": "Black",
+    "material": "Plastic/Glass",
+    "style": "Appliance"
+  },
+  {
+    "id": "prod_042",
+    "name": "Toaster",
+    "category": "Kitchen",
+    "image_path": "images/products42.jpg",
+    "description": "A compact two-slice toaster with different browning options.",
+    "color": "Red",
+    "material": "Metal/Plastic",
+    "style": "Appliance"
+  },
+  {
+    "id": "prod_043",
+    "name": "Cooking Pan Set",
+    "category": "Kitchen",
+    "image_path": "images/products43.jpg",
+    "description": "A non-stick pan set with various sizes for all your cooking needs.",
+    "color": "Black",
+    "material": "Aluminum/Teflon",
+    "style": "Cookware"
+  },
+  {
+    "id": "prod_044",
+    "name": "Kitchen Knife Block Set",
+    "category": "Kitchen",
+    "image_path": "images/products44.jpg",
+    "description": "A set of high-quality stainless steel kitchen knives in a wooden block.",
+    "color": "Silver/Wood",
+    "material": "Stainless Steel/Wood",
+    "style": "Utensils"
+  },
+  {
+    "id": "prod_045",
+    "name": "Running Shoes",
+    "category": "Footwear",
+    "image_path": "images/products45.jpg",
+    "description": "Lightweight running shoes with cushioning for comfort and support.",
+    "color": "Blue",
+    "material": "Mesh/Rubber",
+    "style": "Athletic"
+  },
+  {
+    "id": "prod_046",
+    "name": "Hiking Boots",
+    "category": "Footwear",
+    "image_path": "images/products46.jpg",
+    "description": "Durable hiking boots with ankle support and a non-slip sole.",
+    "color": "Brown/Orange",
+    "material": "Leather/Rubber",
+    "style": "Outdoor"
+  },
+  {
+    "id": "prod_047",
+    "name": "Sandals",
+    "category": "Footwear",
+    "image_path": "images/products47.jpg",
+    "description": "Comfortable sandals with a durable strap, perfect for summer.",
+    "color": "Black",
+    "material": "Foam/Nylon",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_048",
+    "name": "Dress Shoes",
+    "category": "Footwear",
+    "image_path": "images/products48.jpg",
+    "description": "Formal leather dress shoes with a polished finish.",
+    "color": "Black",
+    "material": "Leather",
+    "style": "Formal"
+  },
+  {
+    "id": "prod_049",
+    "name": "Sun Hat",
+    "category": "Accessories",
+    "image_path": "images/products49.jpg",
+    "description": "A wide-brimmed sun hat to provide protection on a sunny day.",
+    "color": "Straw",
+    "material": "Straw",
+    "style": "Headwear"
+  },
+  {
+    "id": "prod_050",
+    "name": "Leather Gloves",
+    "category": "Accessories",
+    "image_path": "images/products50.jpg",
+    "description": "Stylish leather gloves with a warm fleece lining.",
+    "color": "Brown",
+    "material": "Leather/Fleece",
+    "style": "Gloves"
+  },
+  {
+    "id": "prod_051",
+    "name": "Wool Scarf",
+    "category": "Accessories",
+    "image_path": "images/products51.jpg",
+    "description": "A soft, thick wool scarf to keep warm in winter.",
+    "color": "Grey",
+    "material": "Wool",
+    "style": "Scarf"
+  },
+  {
+    "id": "prod_052",
+    "name": "Silk Tie",
+    "category": "Accessories",
+    "image_path": "images/products52.jpg",
+    "description": "A classic silk tie with a subtle pattern for formal events.",
+    "color": "Navy",
+    "material": "Silk",
+    "style": "Tie"
+  },
+  {
+    "id": "prod_053",
+    "name": "Laptop Backpack",
+    "category": "Accessories",
+    "image_path": "images/products53.jpg",
+    "description": "A professional backpack with a padded compartment for a laptop.",
+    "color": "Black",
+    "material": "Nylon",
+    "style": "Backpack"
+  },
+  {
+    "id": "prod_054",
+    "name": "Digital Camera",
+    "category": "Electronics",
+    "image_path": "images/products54.jpg",
+    "description": "A compact digital camera with high-resolution video and photo capabilities.",
+    "color": "Black",
+    "material": "Plastic/Metal",
+    "style": "Camera"
+  },
+  {
+    "id": "prod_055",
+    "name": "Smart Speaker",
+    "category": "Electronics",
+    "image_path": "images/products55.jpg",
+    "description": "A smart speaker with voice assistant integration for hands-free control.",
+    "color": "White",
+    "material": "Fabric/Plastic",
+    "style": "Audio"
+  },
+  {
+    "id": "prod_056",
+    "name": "Men's V-Neck Sweater",
+    "category": "Apparel",
+    "image_path": "images/products56.jpg",
+    "description": "A soft, fine-knit sweater with a classic v-neckline, ideal for layering or wearing on its own.",
+    "color": "Burgundy",
+    "material": "Cashmere",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_057",
+    "name": "Women's Trench Coat",
+    "category": "Apparel",
+    "image_path": "images/products57.jpg",
+    "description": "A classic double-breasted trench coat with a belted waist and a water-resistant finish.",
+    "color": "Beige",
+    "material": "Cotton Blend",
+    "style": "Outerwear"
+  },
+  {
+    "id": "prod_059",
+    "name": "Men's Swim Trunks",
+    "category": "Apparel",
+    "image_path": "images/products59.jpg",
+    "description": "Quick-drying swim trunks with a bright tropical print and a mesh lining.",
+    "color": "Multicolor",
+    "material": "Polyester",
+    "style": "Swimwear"
+  },
+  {
+    "id": "prod_058",
+    "name": "Women's Yoga Pants",
+    "category": "Apparel",
+    "image_path": "images/products58.jpg",
+    "description": "Stretchy, high-waisted yoga pants with a hidden pocket, perfect for workouts or casual wear.",
+    "color": "Black",
+    "material": "Spandex",
+    "style": "Athleisure"
+  },
+  {
+    "id": "prod_060",
+    "name": "Men's Loafers",
+    "category": "Footwear",
+    "image_path": "images/products60.jpg",
+    "description": "Stylish and comfortable slip-on loafers with a soft leather finish.",
+    "color": "Brown",
+    "material": "Leather",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_061",
+    "name": "Women's Rain Boots",
+    "category": "Footwear",
+    "image_path": "images/products61.jpg",
+    "description": "Waterproof ankle boots with a non-slip sole, designed to keep your feet dry in wet weather.",
+    "color": "Yellow",
+    "material": "Rubber",
+    "style": "Rainwear"
+  },
+  {
+    "id": "prod_063",
+    "name": "Leather Backpack",
+    "category": "Accessories",
+    "image_path": "images/products63.jpg",
+    "description": "A versatile and spacious backpack made from genuine leather with multiple compartments.",
+    "color": "Tan",
+    "material": "Leather",
+    "style": "Urban"
+  },
+  {
+    "id": "prod_062",
+    "name": "Wool Scarf",
+    "category": "Accessories",
+    "image_path": "images/products62.jpg",
+    "description": "A soft and warm wool scarf with a classic plaid pattern, perfect for colder seasons.",
+    "color": "Red/Black",
+    "material": "Wool",
+    "style": "Winter"
+  },
+  {
+    "id": "prod_064",
+    "name": "Men's Slim-Fit Jeans",
+    "category": "Apparel",
+    "image_path": "images/products64.jpg",
+    "description": "Classic five-pocket jeans with a modern slim fit through the leg and a dark wash finish.",
+    "color": "Dark Blue",
+    "material": "Denim",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_065",
+    "name": "Women's Skinny Jeans",
+    "category": "Apparel",
+    "image_path": "images/products65.jpg",
+    "description": "High-waisted skinny jeans with a stretch fabric for a comfortable and form-fitting look.",
+    "color": "Light Blue",
+    "material": "Denim",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_066",
+    "name": "Winter Parka",
+    "category": "Apparel",
+    "image_path": "images/products66.jpg",
+    "description": "A heavy-duty winter parka with a faux fur-lined hood and a quilted interior for maximum warmth.",
+    "color": "Navy Blue",
+    "material": "Polyester",
+    "style": "Winter"
+  },
+  {
+    "id": "prod_067",
+    "name": "Cable-Knit Sweater",
+    "category": "Apparel",
+    "image_path": "images/products67.jpg",
+    "description": "A cozy, thick cable-knit sweater with a crewneck, perfect for layering during the colder months.",
+    "color": "Beige",
+    "material": "Wool Blend",
+    "style": "Knitwear"
+  },
+  {
+    "id": "prod_068",
+    "name": "Small Side Table",
+    "category": "Furniture",
+    "image_path": "images/products68.jpg",
+    "description": "A small, round side table with a simple design, perfect for holding a lamp or a book.",
+    "color": "Natural Wood",
+    "material": "Wood",
+    "style": "Scandinavian"
+  },
+  {
+    "id": "prod_069",
+    "name": "Resistance Bands",
+    "category": "Sports",
+    "image_path": "images/products69.jpg",
+    "description": "A set of five latex resistance bands with varying tension levels for strength training and physical therapy.",
+    "color": "Multicolor",
+    "material": "Latex",
+    "style": "Training"
+  },
+  {
+    "id": "prod_070",
+    "name": "Portable Hard Drive",
+    "category": "Electronics",
+    "image_path": "images/products70.jpg",
+    "description": "A high-capacity portable hard drive for backing up files and data on the go.",
+    "color": "Black",
+    "material": "Plastic",
+    "style": "Storage"
+  },
+  {
+    "id": "prod_071",
+    "name": "Women's High-Waisted Skirt",
+    "category": "Apparel",
+    "image_path": "images/products71.jpg",
+    "description": "A stylish, high-waisted pleated skirt with a midi length and a subtle zip closure.",
+    "color": "Navy Blue",
+    "material": "Polyester",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_072",
+    "name": "Men's Polo Shirt",
+    "category": "Apparel",
+    "image_path": "images/products72.jpg",
+    "description": "A comfortable short-sleeve polo shirt with a classic collar and button placket.",
+    "color": "Light Blue",
+    "material": "Pique Cotton",
+    "style": "Polo"
+  },
+  {
+    "id": "prod_073",
+    "name": "Unisex Hoodie",
+    "category": "Apparel",
+    "image_path": "images/products73.jpg",
+    "description": "A soft, fleece-lined hoodie with a kangaroo pocket and an adjustable drawstring hood.",
+    "color": "Grey",
+    "material": "Fleece",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_074",
+    "name": "Women's Denim Jacket",
+    "category": "Apparel",
+    "image_path": "images/products74.jpg",
+    "description": "A timeless denim jacket with a light wash and button-front closure, perfect for layering.",
+    "color": "Denim",
+    "material": "Cotton",
+    "style": "Casual"
+  },
+  {
+    "id": "prod_075",
+    "name": "Dumbbell Set",
+    "category": "Sports",
+    "image_path": "images/products75.jpg",
+    "description": "A set of neoprene-coated dumbbells, including a variety of weights, for a full body workout.",
+    "color": "Grey/Black",
+    "material": "Cast Iron",
+    "style": "Weight Training"
+  }
+]
